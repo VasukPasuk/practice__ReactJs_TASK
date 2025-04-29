@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+  }
+
+  .clicker-script-font {
+    font-family: "Clicker Script", serif;
+  }
+
+  input {
+    font-family: "Playfair Display", serif;
+    outline: none;
+    border: none;
+  }
+}
+
+@theme {
+  --color-coffee: #603809;
+  --color-common-text: #707070;
+}
+
+:root {
+  --sides-offset: 12rem;
+  --top-offset: 82px;
+
+}
+
+@media screen and (width <= 1366px){
+  html { font-size: 90%; }
+  :root {
+    --sides-offset: 4rem;
+  }
+}
+
+@media screen and (width <= 768px){
+  html { font-size: 85%; }
+  :root {
+    --sides-offset: 3rem;
+  }
+}
+
+@media screen and (width <= 480px){
+  html { font-size: 75%; }
+  :root {
+    --sides-offset: 2rem;
+  }
+}
