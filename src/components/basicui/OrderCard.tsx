@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Button from "./Button.tsx";
 
 interface OrderCardProps {
@@ -5,12 +6,19 @@ interface OrderCardProps {
   title: string;
   description: string;
   price: string;
+  delay: number;
 }
 
 
-export default function OrderCard({description, imageUrl, price , title}: OrderCardProps) {
+export default function OrderCard({description, imageUrl, price , title, delay}: OrderCardProps) {
   return (
-    <li className="flex flex-col relative">
+    <motion.li
+      initial={{opacity: 0, y: -100}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{duration: 2, type: "spring", delay: delay}}
+      viewport={{once: true}}
+      className="flex flex-col relative"
+    >
       <div>
         <img src={`./${imageUrl}`} alt="coffee-image-item"/>
       </div>
@@ -23,6 +31,6 @@ export default function OrderCard({description, imageUrl, price , title}: OrderC
       <div className="absolute bottom-0 left-0 w-full transform translate-y-1/2 flex justify-center">
         <Button className="font-bold">Order Now</Button>
       </div>
-    </li>
+    </motion.li>
   )
 }

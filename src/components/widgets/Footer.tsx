@@ -6,7 +6,7 @@ import {FaTwitter} from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer
-      className="relative flex flex-row flex-wrap gap-16 items-start justify-between px-[var(--sides-offset)] pt-40 pb-20 text-white">
+      className="relative flex flex-row flex-wrap gap-16 items-start justify-between px-[var(--sides-offset)] pt-40 pb-20 text-white bg-coffee/80">
 
       <div className="flex flex-col gap-y-4">
         <h1 className="clicker-script-font text-6xl">Bean Scene</h1>
@@ -15,10 +15,10 @@ export default function Footer() {
           and
           scrambled it to <br/> make a type specimen book.</h2>
         <div className="flex flex-row gap-x-6">
-          <a href="#"><FaFacebook size={32}/></a>
-          <a href="#"><FaInstagram size={32}/></a>
-          <a href="#"><CiYoutube size={32}/></a>
-          <a href="#"><FaTwitter size={32}/></a>
+          <a target="_blank" href="#"><FaFacebook size={32}/></a>
+          <a target="_blank" href="#"><FaInstagram size={32}/></a>
+          <a target="_blank" href="#"><CiYoutube size={32}/></a>
+          <a target="_blank" href="#"><FaTwitter size={32}/></a>
         </div>
       </div>
       <div className="flex flex-col gap-y-4">
@@ -43,11 +43,11 @@ export default function Footer() {
         <span>www.beanscene.com</span>
       </div>
 
-      <div className="absolute opacity-80 w-full h-full bottom-0 left-0 -z-10">
-        <img src="./footer-image.png" alt="footer-image" className="w-full h-full opacity-50 object-cover"
-             style={{objectPosition: 'bottom center'}}/>
-        <div className="bg-[#442808] -z-20 w-full h-full absolute top-0 left-0"/>
-      </div>
+      {/*<div className="absolute opacity-80 w-full h-full bottom-0 left-0 -z-10">*/}
+      {/*  <img src="./footer-image.png" alt="footer-image" className="w-full h-full opacity-50 object-cover"*/}
+      {/*       style={{objectPosition: 'bottom center'}}/>*/}
+      {/*  <div className="bg-[#442808] -z-20 w-full h-full absolute top-0 left-0"/>*/}
+      {/*</div>*/}
     </footer>
   )
 }
